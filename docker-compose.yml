@@ -1,0 +1,33 @@
+version: '3.8'
+
+services:
+  ngo-mongo:
+    image: mongo
+    container_name: ngo-mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+
+  ngo-backend:
+    build: ./server
+    container_name: ngo-backend
+    ports:
+      - "3001:3001"
+    environment:
+      - STRIPE_SECRET_KEY=..............
+      - MONGODB_URI=mongodb://ngo-mongo:27017/ngo-donations
+      - FRONTEND_URL=http://localhost:3000
+    depends_on:
+      - ngo-mongo
+
+  ngo-frontend:
+    build: ./client
+    container_name: ngo-frontend
+    ports:
+      - "3000:3000"
+
+volumes:
+  mongo-data:
+
+

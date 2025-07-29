@@ -5,7 +5,7 @@ const Donation = require('../models/Donation');
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 
-// POST /api/donate
+
 router.post('/api/donate', async (req, res) => {
   const { name, email, amount, cause } = req.body;
 

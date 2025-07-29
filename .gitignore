@@ -1,42 +1,40 @@
-# === Node.js Dependencies ===
+
 node_modules/
 
-# === Build Output ===
+
 build/
 dist/
 
-# === Environment Variables ===
+
 .env
 .env.*  # support for .env.development, etc.
 
-# === Log Files ===
+
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 
-# === OS-Specific ===
+
 .DS_Store
 Thumbs.db
 
-# === Docker-Related ===
 docker-volume/
 *.local
 
-# === Editor & IDE Settings ===
+
 .vscode/
 .idea/
 *.swp
 
-# === Coverage Reports ===
+
 coverage/
 
-# === Misc ===
 *.log
 *.pid
 *.seed
 *.tgz
 
-# === Optional: Ignore uploads or temp folders if you have them ===
+
 uploads/
 tmp/

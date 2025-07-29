@@ -1,4 +1,4 @@
-// ✅ FILE: client/src/pages/Cancel.jsx
+
 import React from 'react';
 
 export default function Cancel() {
